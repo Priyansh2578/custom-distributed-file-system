@@ -1,0 +1,6 @@
+cdfs_env/
+__pycache__/
+*.pyc
+*.o
+*.bin
+.vscode/
