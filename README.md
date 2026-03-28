@@ -1,56 +1,47 @@
-# Custom Distributed File System (CDFS)
+# 🚀 Custom Distributed File System (CDFS)
 
-##  Description
-This project is a Custom Distributed File System built in C using a client-server architecture. It allows storing and retrieving files through network communication.
+## 📌 Overview
+CDFS is a custom-built distributed file system implemented in C using a client-server architecture.  
+It supports key-value storage with efficient data retrieval using advanced data structures.
 
----
-
-##  Features
-- TCP client-server communication
-- File storage and retrieval system
-- In-memory hashmap for fast lookup
-- B-Tree based indexing concept
-- Disk persistence support
+Additionally, a Python-based API and web interface are built on top of the system to enable easy interaction through a browser.
 
 ---
 
-## 🛠️Tech Stack
-- Language: C
-- Concepts: Data Structures, Networking
-- Environment: Linux
+## ⚙️ Core Features
+- TCP client-server communication (C)
+- In-memory HashMap for fast key lookup
+- B-Tree indexing for structured storage
+- Disk persistence support (AOF)
+- Multi-layer architecture (System + API + UI)
 
 ---
 
-##  How to Run
-
-### Step 1: Compile Server
-gcc server.c -o server
-
-### Step 2: Run Server
-./server
-
-### Step 3: Compile Client
-gcc client.c -o client
-
-### Step 4: Run Client
-./client
+## 🌐 Web Interface Features
+- Send Ping request  
+- SET key-value pairs  
+- GET stored values  
+- DELETE keys  
+- Real-time response display  
 
 ---
 
-##  Project Flow
-1. Client sends request to server  
-2. Server processes the request  
-3. Data is stored/retrieved from memory/disk  
-4. Response is sent back to client  
+## 🏗️ System Architecture
+
+User (Browser)  
+↓  
+Web Interface (HTML/CSS)  
+↓  
+Python API (Flask)  
+↓  
+C Server (CDFS Core)  
+↓  
+Data Structures (HashMap + B-Tree)  
 
 ---
 
-##  Learning Outcome
-- Understanding of system-level programming  
-- Hands-on experience with sockets and networking  
-- Implementation of data structures in real-world systems  
+## ▶️ How to Run
 
----
-
-##  GitHub Repository
-https://github.com/Priyansh2578/custom-distributed-file-system
+### 1️⃣ Compile Server
+```bash
+gcc server.c btree.c hashmap.c -o server
