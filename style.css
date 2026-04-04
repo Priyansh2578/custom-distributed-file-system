@@ -78,8 +78,7 @@ canvas {
   height: 400px;
 }
 
-/* ================= FILE PANEL ================= */
-
+/* FILE PANEL */
 .files {
   width: 260px;
   padding: 20px;
@@ -93,13 +92,11 @@ canvas {
   margin-bottom: 15px;
 }
 
-/* remove bullet */
 .files ul {
   list-style: none;
   padding: 0;
 }
 
-/* file card */
 .files li {
   background: linear-gradient(135deg, #1e293b, #0f172a);
   margin: 10px 0;
@@ -113,7 +110,6 @@ canvas {
   overflow: hidden;
 }
 
-/* hover effect 🔥 */
 .files li:hover {
   transform: scale(1.05);
   background: linear-gradient(135deg, #38bdf8, #6366f1);
@@ -121,7 +117,6 @@ canvas {
   color: white;
 }
 
-/* glowing side bar */
 .files li::before {
   content: "";
   position: absolute;
@@ -130,12 +125,59 @@ canvas {
   height: 100%;
   width: 4px;
   background: #38bdf8;
-  box-shadow: 0 0 10px #38bdf8;
 }
 
-/* file icon */
 .files li::after {
   content: "📄";
   position: absolute;
   right: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .sidebar button {
+    font-size: 12px;
+    padding: 8px;
+    width: 45%;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  canvas {
+    width: 100%;
+    height: 250px;
+  }
+
+  .files {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+}
+
+/* 💻 Tablet */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .files {
+    width: 200px;
+  }
 }
