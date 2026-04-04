@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CDFS Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>CDFS</h2>
+
+    <button onclick="uploadFile()">Upload</button>
+    <button onclick="downloadFile()">Download</button>
+    <button onclick="showNodes()">Nodes</button>
+    <button onclick="showStorage()">Storage</button>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <h1>Custom Distributed File System</h1>
+
+    <input type="file" id="fileInput">
+    <button class="uploadBtn" onclick="uploadFile()">Upload File</button>
+
+    <canvas id="net"></canvas>
+  </div>
+
+  <!-- Files -->
+  <div class="files">
+    <h2>Files</h2>
+    <ul id="fileList"></ul>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
