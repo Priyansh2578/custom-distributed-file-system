@@ -2,26 +2,29 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
 }
 
 body {
   background: radial-gradient(circle at center, #020617, #000);
   color: white;
+  min-height: 100vh;
 }
 
-/* Layout */
+/* ================= LAYOUT ================= */
 .container {
   display: flex;
   height: 100vh;
 }
 
-/* Sidebar */
+/* ================= SIDEBAR ================= */
 .sidebar {
-  width: 220px;
+  width: 230px;
   padding: 20px;
   background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar h2 {
@@ -29,9 +32,9 @@ body {
   margin-bottom: 20px;
 }
 
+/* buttons */
 .sidebar button {
-  width: 100%;
-  margin: 10px 0;
+  margin: 8px 0;
   padding: 12px;
   border: none;
   border-radius: 10px;
@@ -47,7 +50,24 @@ body {
   transform: scale(1.05);
 }
 
-/* Main */
+/* Google button */
+.googleBtn {
+  margin-top: 15px;
+  background: #4285F4;
+}
+
+.googleBtn:hover {
+  box-shadow: 0 0 15px #4285F4;
+}
+
+/* user info */
+#userInfo {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ================= MAIN ================= */
 .main {
   flex: 1;
   text-align: center;
@@ -60,7 +80,13 @@ body {
   margin-bottom: 20px;
 }
 
-/* Upload Button */
+/* input */
+input[type="file"] {
+  margin-top: 10px;
+  color: white;
+}
+
+/* upload button */
 .uploadBtn {
   margin-top: 10px;
   padding: 10px 20px;
@@ -71,14 +97,24 @@ body {
   cursor: pointer;
 }
 
-/* Canvas */
+/* wallpaper button */
+.main button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* canvas */
 canvas {
   margin-top: 30px;
   width: 700px;
   height: 400px;
+  border-radius: 20px;
 }
 
-/* FILE PANEL */
+/* ================= FILE PANEL ================= */
 .files {
   width: 260px;
   padding: 20px;
@@ -92,11 +128,12 @@ canvas {
   margin-bottom: 15px;
 }
 
+/* list */
 .files ul {
   list-style: none;
-  padding: 0;
 }
 
+/* file card */
 .files li {
   background: linear-gradient(135deg, #1e293b, #0f172a);
   margin: 10px 0;
@@ -110,6 +147,7 @@ canvas {
   overflow: hidden;
 }
 
+/* hover */
 .files li:hover {
   transform: scale(1.05);
   background: linear-gradient(135deg, #38bdf8, #6366f1);
@@ -117,16 +155,18 @@ canvas {
   color: white;
 }
 
+/* left glow */
 .files li::before {
   content: "";
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
   width: 4px;
+  height: 100%;
   background: #38bdf8;
 }
 
+/* icon */
 .files li::after {
   content: "📄";
   position: absolute;
@@ -144,15 +184,20 @@ canvas {
 
   .sidebar {
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .sidebar h2 {
+    width: 100%;
+    text-align: center;
   }
 
   .sidebar button {
+    width: 45%;
     font-size: 12px;
     padding: 8px;
-    width: 45%;
   }
 
   .main {
